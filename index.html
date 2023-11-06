@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>IMOVEL GUIDE</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="header">
+      <div class="logo-div">
+        <div class="conjunto1">
+          <img src="./logo.png" alt="">
+          <a href="/"></a>
+        </div>
+        <div class="conjunto2">
+          <li><a href="#">Condomínios</a></li>
+          <li><a href="#">Fórum</a></li>
+          <li><a href="#">Guia</a></li>
+          <li><a href="#">Artigos</a></li>
+          <li><a href="#">Ferramentas</a></li>
+        </div>
+      </div>
+      <div class="button-header">
+        <div class="conjunto3">
+          <li><a href="#">Cotar Imóvel</a></li>
+          <li><a href="#">Planos</a></li>
+          <li><a href="#">Entrar</a></li>
+        </div>
+        <div class="cadastre-se">
+          <a href="/">CADASTRE-SE</a>
+        </div>
+      </div>
+      <div class="mobile-menu-icon">
+        <!--<button onclick="menuShow1()"><img class="icon" src="Project-1/menu_white_36dp.svg"></button>-->
+      </div>     
+       <div class="mobile-menu">
+        <li><a href="#">Condomínios</a></li>
+        <li><a href="#">Fórum</a></li>
+        <li><a href="#">Guia</a></li>
+        <li><a href="#">Artigos</a></li>
+        <li><a href="#">Ferramentas</a></li>
+        <li><a href="#">Cotar Imóvel</a></li>
+        <li><a href="#">Planos</a></li>
+        <li><a href="#">Entrar</a></li>
+        <div class="cadastre-se"> <a href="/">CADASTRE-SE</a> </div>
+      </div>
+      </nav>
+
+    </header>
+    <section class="flex">
+      <div class="container">
+        <!-- mod1-->
+        <div class="background-overlay"></div>
+        <div id="phoneModal" class="modal">
+          <div class="modal-content">
+            <p>Telefone: (99) 99999-9999</p>
+            <button id="closePhoneModal">OK</button>
+          </div>
+        </div>
+        <div class="img-info">
+          <img src="./ela.png" alt="">
+          <div class="text-info">
+            <h3>Nome Corretora</h3>
+            <p>3.000 pontos</p>
+            <p><span class="vertelefone" onclick="vertelefone()">Ver telefone</span></p>
+
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="img-info">
+          <img src="./ele.png" alt="">
+          <div class="text-info">
+            <h3>Nome Corretora</h3>
+            <p>1.260 pontos</p>
+            <p><span class="vertelefone" onclick="vertelefone()">Ver telefone</span></p>
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="container">
+        <!-- mod2-->
+        <h1 id="txth">Mande uma mensagem:</h1>
+        <p>
+          <input type="text" name="inicio" id="txti"
+            placeholder="Digite seu CPF" maxlength="14"
+            autocomplete="off">
+        </p>
+        <p>
+          <input type="text" name="fim" id="txtf"
+            placeholder="Digite seu telefone" maxlength="14"
+            autocomplete="off">
+        </p>
+        <p>
+          <textarea name="passo" id="txtp" placeholder="Digite o assunto"
+            style="width: 300px; height: 100px; resize: none; text-align: left;"></textarea>
+        </p>
+        <p><input type="button" value="Enviar Mensagem" class="enviarBtn"
+          onclick="mostrarAlerta()"></p>
+      </div>
+      <div class="container">
+        <!-- mod3-->
+        <h1>Regra de 3</h1>
+        <label for="valorA"></label>
+        <input type="text" placeholder="60" id="valorA">
+        <label for="valorB">----</label>
+        <input type="text" placeholder="100" id="valorB">
+        <br>
+        <br>
+        <label for="valorX"></label>
+        <input type="text" placeholder="30" id="valorX">
+        <label for="valorY">----</label>
+        <input type="text" id="valorY">
+        <br>
+        <br>
+        <button onclick="calcularRegraDeTres()">Calcular</button>
+      </div>
+      <div class="container">
+        <!-- mod4-->
+        <div>
+          <img class="logo-image" src="guide.png"
+            alt="Imagem Centralizada">
+          <button id="openBtn">Abrir Imagem no Modal</button>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close-button" onclick="closeModal()">&times;</span>
+              <img id="modalImage" class="modal-image"
+                alt="Imagem em Modal">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!-- mod5-->
+        <div id="sub-mod5">
+          <img class="logo-image" src="guide.png"
+            alt="Imagem Centralizada"> 
+          <div class="text-img">
+            Imovel Guide
+          </div>
+        </div>
+        <input type="button" id="download" class="enviarBtn" value="Download">
+      </div>
+      <div class="container">
+        <!-- mod6-->
+        <img class="logo-image" src="guide.png"
+          alt="Imagem Centralizada">
+        <div class="model6html">
+          <div class="model6body">
+            <div class="modal-bg" id="modal">
+              <div class="modal-content">
+                <img src="guide.png" alt="Imagem" id="zoomImage">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-links">
+        <li>Termos</li>
+        <li>Contatos</li>
+        <li>Sobre</li>
+      </div>
+      <div class="footer-logo">
+        <p>© Copyright 2022. Todos os direitos reservados.</p>
+        <img src="./logo.png" alt="">
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      $(document).ready(function() {
+      var element = $("#sub-mod5");
+      
+      function autoClick() {
+          html2canvas(element, {
+              useCORS: true,
+              scale: 2,
+              logging: true,
+              onrendered: function(canvas) {
+                  var imageData = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+                  var link = document.createElement('a');
+                  link.href = imageData;
+                  link.download = 'image.jpg';
+                  link.click();
+              }
+          });
+      }
+      
+      $("#download").on('click', function() {
+          autoClick(); 
+        });
+      });
+    </script>
+  </body>
+</html>
